@@ -15,4 +15,4 @@
 
 3、配置1：使用 Local Loopback 连接，且启用了 PROXY protocol。配置2：使用 UDS 连接，且启用了 PROXY protocol。
 
-4、本示例兼容原版 Trojan 应用，即可使用 Trojan 客户端 或 Trojan-Go 客户端对应连接。
+4、本示例兼容原版 Trojan 的服务端应用，即可使用 Trojan 或 Trojan-Go 客户端连接。
