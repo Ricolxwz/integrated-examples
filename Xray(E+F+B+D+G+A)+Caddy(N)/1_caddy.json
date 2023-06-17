@@ -18,7 +18,7 @@
     "root": "/home/tls" //存放TLS证书的基本路径
   },
   "apps": {
-    "layer4": { //加了caddy-l4插件编译的才可启用SNI分流
+    "layer4": {
       "servers": {
         "sni": {
           "listen": [":443"],
@@ -157,7 +157,7 @@
               "headers": {
               	"request": {
                   "set": {
-                    "X-Real-Ip": ["{http.vars.client_ip}"]
+                    "X-Real-IP": ["{http.vars.client_ip}"]
                   }
               	}
               }
@@ -204,10 +204,10 @@
             "curves": ["x25519","secp521r1","secp384r1","secp256r1"]
           }],
           "trusted_proxies": {
-            "source": "cloudflare", //启用了Cloudflare的CDN配置，需caddy-cloudflare-ip插件支持。
+            "source": "cloudflare", //cloudflare为使用cloudflare ips，由caddy-cloudflare-ip插件提供。
             "interval": "12h",
             "timeout": "15s"
-          }, //配置可信CDN服务器的IP范围，实现访问者地址为真实客户端地址。若使用其它非Cloudflare CDN，需自己调整trusted_proxies配置。（可选配）
+          }, //配置可信CDN服务器的IP范围，以实现套CDN的应用的访问IP还原为客户端原始IP。若使用其它非Cloudflare CDN，需自己调整trusted_proxies的配置参数。（选配，套CDN配置。）
           "protocols": ["h1","h2"] //开启HTTP/1.1 server与HTTP/2 server支持（Caddy SNI分流不支持UDP转发）
         }
       }
