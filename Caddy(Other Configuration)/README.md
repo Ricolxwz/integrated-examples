@@ -12,7 +12,7 @@
 
 二、Caddy 以 DNS-01 验证方式申请 TLS 证书的配置方法
 
-Caddy 以 DNS-01 验证方式申请 TLS 证书，必须带对应 DNS API 插件。目前仅提供支持 cloudflare、dnspodcn（dnspod中国版）、duckdns 三种常见插件配置示例。
+Caddy 以 DNS-01 验证方式申请 TLS 证书，必须带对应 DNS API 插件。目前仅提供支持 cloudflare、dnspodcn（dnspod 中国版）、duckdns 三种常见插件配置示例。
 
 注意：
 
