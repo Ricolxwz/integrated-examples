@@ -12,10 +12,10 @@ Hysteria 是一个功能丰富的、专为恶劣网络环境进行优化的网�
 
 1）、Linux 类系统使用 Crontab 指令定时重启 Hysteria 来重载更新后的 TLS 证书，其它系统使用类似命令/工具来定时重启 Hysteria 来重载更新后的 TLS 证书。（通用办法）
 
-2）、若 TLS 证书由 Caddy（内置 ACME 客户端） 提供，可使用 caddy-events-exec 插件应用实现 TLS 证书自动更新后就执行重启 Hysteria 来重载更新后的 TLS 证书，详见 ‘Caddy(Other Configuration) （Caddy的特殊应用配置方法。）’中对应介绍及对应配置示例。（Caddy专属办法）
+2）、若 TLS 证书由 Caddy（内置 ACME 客户端） 提供，可使用 caddy-events-exec 插件应用实现 TLS 证书自动更新后就执行重启 Hysteria 来重载更新后的 TLS 证书，详见 ‘Caddy(Other Configuration) （Caddy的特殊应用配置方法。）’中对应介绍及对应配置示例。（Caddy 专属办法）
 
-3）、若 TLS 证书由 acme.sh 客户端提供，可使用 reloadcmd 参数实现 TLS 证书自动更新后就执行重启 Hysteria 来重载更新后的 TLS 证书，详见 acme.sh 客户端说明。（acme.sh专属办法）
+3）、若 TLS 证书由 acme.sh 客户端提供，可使用 reloadcmd 参数实现 TLS 证书自动更新后就执行重启 Hysteria 来重载更新后的 TLS 证书，详见 acme.sh 客户端说明。（acme.sh 专属办法）
 
-4、若网络极差推荐部署，相比 Xray 或 V2Ray 的 mKCP 应用加速明显。
+4、若网络极差推荐部署，相比 V2Ray 或 Xray 的 mKCP 应用加速明显。
 
 5、若要用 Hysteria 进行高速传输，请[增加系统 UDP 的接收和发送 buffer 大小](https://hysteria.network/zh/docs/optimizations/)。
